@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #005f9e;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.sim-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sim-table th,
+.sim-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.sim-table th {
+    background-color: #007acc;
+    color: white;
+}
+
+.download-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #1e7e34;
+}
