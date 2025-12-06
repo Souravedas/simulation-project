@@ -1,12 +1,17 @@
 import { useState } from "react";
-import { generateSimulation, calculateSummary } from "./components/simulation-logic";
+import {
+  generateSimulation,
+  calculateSummary,
+} from "./components/simulation-logic";
 import Table from "./components/simulation-table";
+import NewspaperSimulation from "./components/newspaper-simulation"; // import here
 import "./index.css";
 
 function App() {
   const [numCustomers, setNumCustomers] = useState("");
   const [data, setData] = useState([]);
   const [summary, setSummary] = useState(null);
+  const [showNewspaper, setShowNewspaper] = useState(false); // state for newspaper page
 
   const handleGenerate = () => {
     const n = parseInt(numCustomers);
@@ -19,9 +24,22 @@ function App() {
     setSummary(calculateSummary(simData));
   };
 
+  // Render Newspaper Simulation if button clicked
+  if (showNewspaper) {
+    return <NewspaperSimulation goBack={() => setShowNewspaper(false)} />;
+  }
+
   return (
     <div className="app-container">
       <h1>Grocery Queue Simulation</h1>
+
+      {/* Button to go to Newspaper Simulation */}
+      <div className="newspaper-button">
+        <button onClick={() => setShowNewspaper(true)}>
+          Go to Newspaper Simulation
+        </button>
+      </div>
+
       <div className="controls">
         <input
           type="number"
@@ -40,8 +58,13 @@ function App() {
             <li>Probability Customer Waits: {summary.probWait}</li>
             <li>Probability Idle: {summary.probIdle}</li>
             <li>Average Service Time: {summary.avgServiceTime}</li>
-            <li>Average Time Between Arrivals: {summary.avgTimeBetweenArrival}</li>
-            <li>Average Waiting for Those Who Wait: {summary.avgWaitingForThoseWhoWait}</li>
+            <li>
+              Average Time Between Arrivals: {summary.avgTimeBetweenArrival}
+            </li>
+            <li>
+              Average Waiting for Those Who Wait:{" "}
+              {summary.avgWaitingForThoseWhoWait}
+            </li>
             <li>Average Time in System: {summary.avgTimeInSystem}</li>
           </ul>
         </div>
