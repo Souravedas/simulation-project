@@ -1,0 +1,84 @@
+.newspaper-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.newspaper-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.controls input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #1e8449;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.sim-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sim-table th,
+.sim-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.sim-table th {
+  background-color: #27ae60;
+  color: white;
+}
+
+.sim-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.download-btn {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #1c5980;
+}
