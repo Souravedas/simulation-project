@@ -1,0 +1,251 @@
+.ab-page {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 16px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.ab-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.ab-title {
+    margin: 0;
+    font-size: 28px;
+    color: #1f2a37;
+}
+
+.ab-subtitle {
+    margin: 6px 0 0;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.ab-back {
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.ab-back:hover {
+    opacity: 0.9;
+}
+
+.ab-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    margin-top: 14px;
+}
+
+.ab-card-title {
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.ab-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.ab-field {
+    flex: 1;
+    min-width: 240px;
+}
+
+.ab-field label {
+    display: block;
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.ab-field input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    font-size: 14px;
+}
+
+.ab-field input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.ab-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.ab-primary {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.ab-primary:hover {
+    background: #1d4ed8;
+}
+
+.ab-secondary {
+    background: #f3f4f6;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.ab-secondary:hover {
+    background: #e5e7eb;
+}
+
+.ab-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.ab-stat {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    background: #fafafa;
+}
+
+.ab-stat-wide {
+    grid-column: span 4;
+}
+
+.ab-stat-label {
+    display: block;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.ab-stat-value {
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.ab-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.ab-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 980px;
+}
+
+.ab-table th,
+.ab-table td {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.ab-table th {
+    background: #111827;
+    color: white;
+    font-weight: 800;
+    position: sticky;
+    top: 0;
+}
+
+.ab-table tr:nth-child(even) td {
+    background: #f9fafb;
+}
+
+.ab-note {
+    margin: 10px 2px 0;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.ab-empty {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px dashed #cbd5e1;
+    color: #334155;
+    background: #f8fafc;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ab-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .ab-stat-wide {
+        grid-column: span 2;
+    }
+}
+/* -------- Able–Baker Table Improvements -------- */
+
+.ab-table th,
+.ab-table td {
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+.ab-table th {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* Group headers (Able / Baker) */
+.group-header {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.able-header {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+}
+
+.baker-header {
+    background: linear-gradient(135deg, #ff9800, #ef6c00);
+    color: white;
+}
+
+/* Improve readability */
+.ab-table tr:hover td {
+    background-color: #eef2ff;
+}

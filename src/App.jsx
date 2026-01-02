@@ -4,14 +4,17 @@ import {
   calculateSummary,
 } from "./components/simulation-logic";
 import Table from "./components/simulation-table";
-import NewspaperSimulation from "./components/newspaper-simulation"; // import here
+import NewspaperSimulation from "./components/newspaper-simulation";
+import AbleBakerSimulation from "./components/able-baker-simulation"; // NEW
 import "./index.css";
 
 function App() {
   const [numCustomers, setNumCustomers] = useState("");
   const [data, setData] = useState([]);
   const [summary, setSummary] = useState(null);
-  const [showNewspaper, setShowNewspaper] = useState(false); // state for newspaper page
+
+  const [page, setPage] = useState("grocery");
+  // "grocery" | "newspaper" | "ablebaker"
 
   const handleGenerate = () => {
     const n = parseInt(numCustomers);
@@ -24,21 +27,42 @@ function App() {
     setSummary(calculateSummary(simData));
   };
 
-  // Render Newspaper Simulation if button clicked
-  if (showNewspaper) {
-    return <NewspaperSimulation goBack={() => setShowNewspaper(false)} />;
+  /* -------- PAGE SWITCHING -------- */
+
+  if (page === "newspaper") {
+    return <NewspaperSimulation goBack={() => setPage("grocery")} />;
   }
+
+  if (page === "ablebaker") {
+    return <AbleBakerSimulation goBack={() => setPage("grocery")} />;
+  }
+
+  /* -------- MAIN GROCERY PAGE -------- */
 
   return (
     <div className="app-container">
-      <h1>Grocery Queue Simulation</h1>
+      <h1>Simulation Models</h1>
 
-      {/* Button to go to Newspaper Simulation */}
-      <div className="newspaper-button">
-        <button onClick={() => setShowNewspaper(true)}>
-          Go to Newspaper Simulation
+      {/* Navigation Buttons */}
+      <div className="nav-buttons">
+        <button
+          className="nav-btn newspaper-btn"
+          onClick={() => setPage("newspaper")}
+        >
+          📰 Newspaper Simulation
+        </button>
+
+        <button
+          className="nav-btn ablebaker-btn"
+          onClick={() => setPage("ablebaker")}
+        >
+          👥 Able–Baker Simulation
         </button>
       </div>
+
+      <hr className="divider" />
+
+      <h2 className="section-title">Grocery Queue Simulation</h2>
 
       <div className="controls">
         <input

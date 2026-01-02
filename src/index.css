@@ -81,3 +81,61 @@ h1 {
 .download-btn:hover {
     background-color: #1e7e34;
 }
+/* ---------- Navigation Buttons ---------- */
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Newspaper Button */
+.newspaper-btn {
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+}
+
+.newspaper-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Able–Baker Button */
+.ablebaker-btn {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    color: white;
+}
+
+.ablebaker-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Divider */
+.divider {
+    margin: 25px 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #ddd, #aaa, #ddd);
+}
+
+/* Section title */
+.section-title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #444;
+}
